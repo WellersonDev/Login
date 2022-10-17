@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+/*
+    Paleta de cores
+    Verde: #49A09D
+    Lilás: #5F2C82
+*/
+
+:root {
+    --verde: #49A09D;
+    --lilás: #5F2C82;
+    --corDeEfeito: #1484B1;
+}
+
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: var(--lilás);
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
+    background-color: white;
+    width: 250px;
+    height: 580px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.452);
+
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+}
+
+section#login div#imagem {
+    display: block;
+    background: var(--lilás) url(../imagens/predio.jpg) no-repeat;
+    background-size: 200%;
+    background-position: right bottom;
+    height: 200px;
+}
+
+section#login div#formulario {
+    display: block;
+    padding: 10px;
+}
+
+section#login div#formulario h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section#login div#formulario p {
+    margin-bottom: 15px;
+}
+
+section#login div#formulario div.campo {
+    display: block;
+    width: 100%;
+    height: 45px;
+    background-color: var(--lilás);
+    margin-bottom: 5px;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+section#login div#formulario div.campo span {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+section#login div#formulario div.campo input {
+    background-color: var(--verde);
+    font-size: 1em;
+    width: calc(100% - 48px);
+    transform: translateY(-13px);
+    height: 100%;
+    padding: 4px;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    outline: 0px;
+}
+
+section#login div#formulario div.campo input:focus {
+    background-color: var(--corDeEfeito);
+}
+
+section#login div#formulario div.campo input::placeholder {
+    color: white;
+    opacity: 70%;
+}
+
+section#login div#formulario form input[type=submit] {
+    background-color: var(--verde);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    border: 0px;
+    outline: 0px;
+    cursor: pointer;
+}
+
+section#login div#formulario form input:hover {
+    background-color: var(--corDeEfeito);
+}
+
+section#login div#formulario form button {
+    background-color: transparent;
+    color: var(--verde);
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: 2px solid var(--verde);
+    outline: 0px;
+    cursor: pointer;
+}
+
+section#login div#formulario form button span {
+    font-size: 15px;
+}
+
+section#login div#formulario span#aviso {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.493);
+}
